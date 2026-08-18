@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria responsiva de personagens Sanrio">
+    <title>Galeria Sanrio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteudo-header">
+            <h1>Galeria Sanrio</h1>
+            <p>Conheça alguns dos meus personagens favoritos da Sanrio.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="filtros" aria-label="Filtrar personagens">
+            <button class="filtro ativo" data-personagem="todos">Todos</button>
+            <button class="filtro" data-personagem="mymelody">My Melody</button>
+            <button class="filtro" data-personagem="pompompurin">Pompompurin</button>
+            <button class="filtro" data-personagem="cinnamoroll">Cinnamoroll</button>
+        </nav>
+
+        <section class="galeria" aria-label="Galeria de personagens">
+            <article class="personagem" data-personagem="mymelody">
+                <div class="titulo-personagem">
+                    <h2>My Melody</h2>
+                    <span>Personagem 1</span>
+                </div>
+                <div class="imagens">
+                    <img src="https://i.pinimg.com/736x/d1/64/8c/d1648c9a67276b09a4ba56522a649ddc.jpg" alt="My Melody" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/33/06/a0/3306a0e9049fa466db7c72f780020cf5.jpg" alt="My Melody" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/53/a1/07/53a107743b24465e6f9ae85782f6a461.jpg" alt="My Melody" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/1200x/78/ec/21/78ec21323f4a72a767a57ba882f52b37.jpg" alt="My Melody" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/51/5f/84/515f84c736e63f20c93634b030f12bf6.jpg" alt="My Melody" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/77/79/58/777958227c12699c46dfe5d787843797.jpg" alt="My Melody" class="imagem-galeria">
+                </div>
+            </article>
+
+            <article class="personagem" data-personagem="pompompurin">
+                <div class="titulo-personagem">
+                    <h2>Pompompurin</h2>
+                    <span>Personagem 2</span>
+                </div>
+                <div class="imagens">
+                    <img src="https://i.pinimg.com/736x/f2/7a/d1/f27ad17eca85bede9c2d55f74fae43c8.jpg" alt="Pompompurin" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/5f/5e/52/5f5e525de8ba5d260bdd25a1fe65c46a.jpg" alt="Pompompurin" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/00/2b/d6/002bd6ffb3ba81b6ebe9a4ce256fcaf5.jpg" alt="Pompompurin" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/49/f5/7c/49f57c0c5efff147d4364e9bdffb7417.jpg" alt="Pompompurin" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/1200x/be/89/7d/be897d8d03d76a7c86250321f264c3fd.jpg" alt="Pompompurin" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/9c/84/de/9c84de128a45ad5abceedb352e66f9db.jpg" alt="Pompompurin" class="imagem-galeria">
+                </div>
+            </article>
+
+            <article class="personagem" data-personagem="cinnamoroll">
+                <div class="titulo-personagem">
+                    <h2>Cinnamoroll</h2>
+                    <span>Personagem 3</span>
+                </div>
+                <div class="imagens">
+                    <img src="https://i.pinimg.com/736x/fd/de/e2/fddee2058846ca16419c0a8cb640969b.jpg" alt="Cinnamoroll" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/1200x/d4/52/67/d45267fda4fbe5db7c8aa288937d05a8.jpg" alt="Cinnamoroll" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/da/7f/c2/da7fc21291137fcc5ee0bea0c18df0d7.jpg" alt="Cinnamoroll" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/f0/75/b7/f075b759f8ff86b4f0048be3c89f4631.jpg" alt="Cinnamoroll" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/736x/89/2c/65/892c65d07e9e0890d8243e661141503b.jpg" alt="Cinnamoroll" class="imagem-galeria">
+                    <img src="https://i.pinimg.com/1200x/8f/66/c1/8f66c1b41d191552cff9adb4a78f7d1b.jpg" alt="Cinnamoroll" class="imagem-galeria">
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div class="modal" id="modal" aria-hidden="true">
+        <button class="fechar" id="fechar" aria-label="Fechar imagem">&times;</button>
+        <button class="anterior" id="anterior" aria-label="Imagem anterior">&#10094;</button>
+        <img id="imagemModal" src="" alt="Imagem ampliada">
+        <button class="proxima" id="proxima" aria-label="Próxima imagem">&#10095;</button>
+        <p id="contador"></p>
+    </div>
+
+    <footer>
+        <p>Projeto desenvolvido com HTML, CSS e JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
